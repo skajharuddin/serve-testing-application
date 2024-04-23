@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Information</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h2>Edit Entry</h2>
+    <div class="new-content">
+      <br />
+      <form action="/<%= specificInfo.id %>?_method=PATCH" method="post">
+        <table class="new-table table">
+          <tr>
+            <th>Id <small style="color: red; font-size: 8px;">*Id changes itself.</small></th>
+            <td><%= specificInfo.id %></td>
+          </tr>
+          <tr>
+            <th>Username <small style="color: red; font-size: 8px;">*Username is unchangeable.</small></th>
+            <td><%= specificInfo.username %></td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <td>
+              <input
+                type="text"
+                name="name"
+                required
+                value="<%= specificInfo.name %>"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>
+              <select class="select-gender" name="gender" id="" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Parent</th>
+            <td>
+              <input
+                type="text"
+                name="parent"
+                required
+                value="<%= specificInfo.parent %>"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Course</th>
+            <td>
+              <input
+                type="text"
+                name="course"
+                required
+                value="<%= specificInfo.course %>"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Academic Session</th>
+            <!-- <td><input type="text" name="session" required/></td> -->
+            <td>
+              <div class="select-session">
+                <select name="sessionStart" id="" required>
+                  <% for(let i = 1900; i<= 2030; i++) { %>
+                  <option value="<%= i  %>"><%= i %></option>
+                  <% } %>
+                </select>
+                <select name="sessionEnd" id="" required>
+                  <% for(let i = 1900; i<= 2030; i++) { %>
+                  <option value="<%= i  %>"><%= i %></option>
+                  <% } %>
+                </select>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Full Address</th>
+            <td>
+              <textarea name="address" cols="20" rows="3" required>
+<%= specificInfo.address %></textarea
+              >
+            </td>
+          </tr>
+          <tr>
+            <th>Mobile</th>
+            <td>
+              <input
+                type="number"
+                name="mobile"
+                required
+                value="<%= specificInfo.mobile %>"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>
+              <input type="email" name="email" required
+              value="<%= specificInfo.email %>"/>
+            </td>
+          </tr>
+          <tr>
+            <th>Other Details</th>
+            <td>
+              <textarea name="details" cols="20" rows="5" required>
+<%= specificInfo.details %></textarea
+              >
+            </td>
+          </tr>
+        </table>
+        <br />
+        <div class="action-in-show">
+          <a href="/home">Home</a>
+          <button style="padding: 5px 15px; font-size: 18px; border: none">
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <%- include("includes/marquee.ejs")%>
+    <!-- footer -->
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>

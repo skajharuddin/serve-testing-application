@@ -1,0 +1,224 @@
+html body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  transition: all 0.5s;
+}
+
+.content {
+  /* max-width: 700px; */
+  margin: auto;
+}
+
+h2 {
+  background-color: antiquewhite;
+  color: tomato;
+  padding: 15px;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+table,
+table th,
+table td {
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.home-table td {
+  padding: 2px 5px;
+  text-align: center;
+}
+
+.new-table {
+  width: 600px;
+}
+
+.new-table th {
+  width: 200px;
+}
+
+.new-table td input {
+  width: 90%;
+  margin: auto;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.089);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  border-radius: 2px;
+}
+
+.new-table textarea {
+  width: 90%;
+  margin: auto;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.089);
+  border: 1px solid rgba(0, 0, 0, 0.555);
+  border-radius: 2px;
+}
+
+.new-table select {
+  width: 90%;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+textarea:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.new-table textarea {
+  resize: none;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.table tr:nth-child(even) {
+  background-color: rgb(250, 250, 250);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 3px 6px;
+}
+
+button,
+a {
+  background-color: green;
+  color: whitesmoke;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+button:hover,
+a:hover {
+  background-color: rgb(9, 92, 9);
+}
+
+.delete {
+  background-color: rgb(223, 8, 8);
+}
+
+.delete:hover {
+  background-color: rgb(180, 4, 4);
+}
+
+a {
+  text-decoration: none;
+}
+
+.action-options {
+  display: flex;
+}
+
+.action {
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+
+.action-options button {
+  padding: 8px 10px;
+  border: none;
+  font-size: 18px;
+}
+
+.action-in-show {
+  margin-top: 10px;
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-in-show a {
+  padding: 5px 15px;
+}
+
+select:focus {
+  outline: none;
+}
+
+select option {
+  font-size: 18px;
+}
+
+.select-gender {
+  width: 90px;
+  padding: 5px;
+}
+
+.select-session {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-session select {
+  padding: 5px 5px;
+  text-align: center;
+  font-size: 18x;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+}
+
+.select-session select:first-child {
+  margin-right: 3px;
+}
+
+.select-session select:last-child {
+  margin-left: 3px;
+}
+
+/* .select-session select:nth-child(1) {
+  margin-right: 2px;
+}
+
+.select-session select:nth-child(2) {
+  margin-left: 2px;
+} */
+
+/* footer design */
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: antiquewhite;
+  position: sticky;
+  bottom: 0;
+  margin: 0;
+}
+
+footer div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div h2 {
+  text-align: center;
+  /* color: whitesmoke; */
+}
+
+/* marquee */
+
+marquee {
+  color: tomato;
+  font-size: 30px;
+}

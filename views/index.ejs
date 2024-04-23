@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h2>Information Table</h2>
+    <hr />
+    <table class="home-table">
+      <legend style="text-align: center">Information</legend>
+      <thead>
+        <tr>
+          <th>Sl. No</th>
+          <th>Username</th>
+          <th>Full Name</th>
+          <th>Session</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <% for(let info of information){ %>
+      <tbody>
+        <tr>
+          <td>
+            <% if((info.sl) < 10) {%>
+            <span>0<%= info.sl %>.</span>
+            <% }else { %>
+            <span><%= info.sl %>.</span>
+            <% } %>
+          </td>
+          <td><%= info.username %></td>
+          <td><%= info.name %></td>
+          <td><%= info.session %></td>
+          <td class="action-options">
+            <a class="action" href="/<%= info.id %>">View</a>
+            <a class="action" href="/<%= info.id %>/edit">Edit</a>
+            <form method="post" action="/<%= info.id  %>?_method=DELETE">
+              <button class="action delete">Delete</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+      <% } %>
+    </table>
+    <br />
+    <hr />
+    <br />
+    <a href="/new">Add A New Entry</a>
+    <br /><br /><br /><br />
+    <%- include("includes/marquee.ejs")%>
+    <!-- footer -->
+    <%- include('includes/footer.ejs') %>
+  </body>
+</html>
